@@ -1,0 +1,7 @@
+{
+  "name": "INFCafe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,27 @@
+<ion-card *ngFor="let product of productList">
+  <ion-card-header>
+    <ion-card-subtitle>R {{product.productPrice}}</ion-card-subtitle>
+    <ion-card-title>{{product.productName}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>{{product.productDescription}}</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Quantity</ion-label>
+            <ion-input type="number" #quantity ></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="addToBasket(product, quantity.value)" style="float: right"><ion-icon name="basket-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
